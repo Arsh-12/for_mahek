@@ -1,4 +1,134 @@
-<!DOCTYPE html>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+.dp*{box-sizing:border-box;margin:0;padding:0;}
+.dp{font-family:system-ui,sans-serif;padding:1rem;background:linear-gradient(160deg,#fff0f5 0%,#fff7fb 60%,#f0f4ff 100%);width:100%;}
+.dp-hearts{text-align:center;font-size:18px;letter-spacing:6px;margin-bottom:0.5rem;animation:flt 3s ease-in-out infinite alternate;}
+@keyframes flt{from{transform:translateY(0);}to{transform:translateY(-5px);}}
+.dp-h1{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:600;text-align:center;background:linear-gradient(135deg,#e0527a,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.3;margin-bottom:0.25rem;}
+.dp-sub{text-align:center;font-size:0.8rem;color:#888;margin-bottom:1.2rem;}
+.dp-divider{display:flex;align-items:center;gap:10px;margin-bottom:1rem;}
+.dp-divider::before,.dp-divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#f0a0c0,transparent);}
+.dp-divider span{font-size:16px;}
+.dp-card{background:rgba(255,255,255,0.88);border-radius:16px;padding:1rem;margin-bottom:1rem;border:1px solid rgba(230,150,180,0.22);position:relative;overflow:hidden;}
+.dp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:16px 16px 0 0;}
+.c-gr::before{background:linear-gradient(90deg,#34d399,#059669);}
+.c-pk::before{background:linear-gradient(90deg,#f472b6,#a855f7);}
+.c-or::before{background:linear-gradient(90deg,#fb923c,#e0527a);}
+.dp-header{display:flex;align-items:center;gap:10px;margin-bottom:0.8rem;}
+.dp-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.i-gr{background:#d1fae5;} .i-pk{background:#fce7f3;} .i-or{background:#ffedd5;}
+.dp-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:#2d1b2e;flex:1;line-height:1.2;}
+.dp-badge{font-size:10px;font-weight:500;padding:3px 8px;border-radius:20px;white-space:nowrap;flex-shrink:0;}
+.b-gr{background:#d1fae5;color:#065f46;} .b-pk{background:#fce7f3;color:#9d174d;} .b-or{background:#ffedd5;color:#9a3412;}
+.dp-tl{list-style:none;}
+.dp-tl li{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px dashed rgba(200,150,180,0.18);font-size:0.8rem;}
+.dp-tl li:last-child{border-bottom:none;}
+.dp-dot{width:6px;height:6px;border-radius:50%;margin-top:5px;flex-shrink:0;}
+.d-gr{background:#10b981;} .d-pk{background:#ec4899;} .d-or{background:#f97316;}
+.dp-time{font-weight:500;font-size:0.73rem;color:#e0527a;min-width:90px;flex-shrink:0;line-height:1.4;}
+.dp-ev{color:#4a3050;line-height:1.4;}
+.dp-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:0.7rem;}
+.dp-tag{font-size:10px;padding:3px 8px;border-radius:20px;background:rgba(200,120,160,0.1);color:#a0406a;border:1px solid rgba(200,120,160,0.18);}
+.dp-cta{background:rgba(255,255,255,0.75);border-radius:16px;padding:1.3rem 1rem;text-align:center;border:1px solid rgba(230,150,180,0.18);margin-top:0.5rem;}
+.dp-cta p{font-size:0.78rem;color:#999;margin-bottom:0.9rem;font-style:italic;}
+.dp-btn{display:inline-block;padding:11px 24px;border-radius:50px;border:none;cursor:pointer;font-size:0.9rem;font-weight:500;font-family:system-ui,sans-serif;background:linear-gradient(135deg,#e0527a,#a855f7);color:white;box-shadow:0 4px 14px rgba(168,85,247,0.22);transition:transform 0.18s;}
+.dp-btn:active{transform:scale(0.97);}
+.dp-msg{display:none;margin-top:1rem;padding:0.9rem 1.1rem;background:linear-gradient(135deg,rgba(224,82,122,0.07),rgba(168,85,247,0.07));border-radius:12px;border:1px solid rgba(224,82,122,0.18);}
+.dp-msg p{font-family:'Playfair Display',serif;font-size:1rem;color:#c0366a;}
+.beat{display:inline-block;animation:hb 1s ease infinite;}
+@keyframes hb{0%,100%{transform:scale(1);}25%{transform:scale(1.3);}75%{transform:scale(1.1);}}
+</style>
+
+<h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Saturday date plan with three options</h2>
+
+<div class="dp">
+  <div class="dp-hearts">💌 🌸 💌</div>
+  <div class="dp-h1">Saturday Date Planner</div>
+  <p class="dp-sub">Pick your adventure... or suggest something better 😏</p>
+  <div class="dp-divider"><span>💕</span></div>
+
+  <div class="dp-card c-gr">
+    <div class="dp-header">
+      <div class="dp-icon i-gr">🌿</div>
+      <div class="dp-title">Dandeli Escape</div>
+      <span class="dp-badge b-gr">Nature</span>
+    </div>
+    <ul class="dp-tl">
+      <li><span class="dp-dot d-gr"></span><span class="dp-time">9:00 AM</span><span class="dp-ev">Leave Hubli</span></li>
+      <li><span class="dp-dot d-gr"></span><span class="dp-time">11:00 AM</span><span class="dp-ev">Reach Dandeli</span></li>
+      <li><span class="dp-dot d-gr"></span><span class="dp-time">11:00 – 1:00 PM</span><span class="dp-ev">River activities 💦</span></li>
+      <li><span class="dp-dot d-gr"></span><span class="dp-time">1:00 – 2:30 PM</span><span class="dp-ev">Lunch 🍽️</span></li>
+      <li><span class="dp-dot d-gr"></span><span class="dp-time">2:30 – 4:30 PM</span><span class="dp-ev">Viewpoints & Eco Parks</span></li>
+      <li><span class="dp-dot d-gr"></span><span class="dp-time">4:30 PM</span><span class="dp-ev">Return journey → 6:30 PM home 🏠</span></li>
+    </ul>
+    <div class="dp-tags">
+      <span class="dp-tag">🚗 ~2 hrs drive</span>
+      <span class="dp-tag">🌊 River fun</span>
+      <span class="dp-tag">🌲 Nature</span>
+    </div>
+  </div>
+
+  <div class="dp-card c-pk">
+    <div class="dp-header">
+      <div class="dp-icon i-pk">📸</div>
+      <div class="dp-title">Utsav Rock Garden</div>
+      <span class="dp-badge b-pk">Aesthetic</span>
+    </div>
+    <ul class="dp-tl">
+      <li><span class="dp-dot d-pk"></span><span class="dp-time">9:00 AM</span><span class="dp-ev">Leave Hubli</span></li>
+      <li><span class="dp-dot d-pk"></span><span class="dp-time">10:30 AM</span><span class="dp-ev">Reach Rock Garden</span></li>
+      <li><span class="dp-dot d-pk"></span><span class="dp-time">11:00 – 1:30 PM</span><span class="dp-ev">Photos, reels & exploring 🤳</span></li>
+      <li><span class="dp-dot d-pk"></span><span class="dp-time">1:30 – 3:00 PM</span><span class="dp-ev">Lunch 🍽️</span></li>
+      <li><span class="dp-dot d-pk"></span><span class="dp-time">3:00 – 4:30 PM</span><span class="dp-ev">Tea & relaxed ride back ☕</span></li>
+      <li><span class="dp-dot d-pk"></span><span class="dp-time">5:00 PM</span><span class="dp-ev">Back in Hubli 🏠</span></li>
+    </ul>
+    <div class="dp-tags">
+      <span class="dp-tag">🚗 ~1.5 hrs drive</span>
+      <span class="dp-tag">📷 Photo spots</span>
+      <span class="dp-tag">🎞️ Reels</span>
+    </div>
+  </div>
+
+  <div class="dp-card c-or">
+    <div class="dp-header">
+      <div class="dp-icon i-or">🎬</div>
+      <div class="dp-title">Hubli City Date</div>
+      <span class="dp-badge b-or">Chill</span>
+    </div>
+    <ul class="dp-tl">
+      <li><span class="dp-dot d-or"></span><span class="dp-time">11:00 AM</span><span class="dp-ev">Brunch together 🥐</span></li>
+      <li><span class="dp-dot d-or"></span><span class="dp-time">1:00 PM</span><span class="dp-ev">Movie at Inorbit 🎥</span></li>
+      <li><span class="dp-dot d-or"></span><span class="dp-time">4:00 PM</span><span class="dp-ev">Coffee & dessert ☕🍰</span></li>
+      <li><span class="dp-dot d-or"></span><span class="dp-time">5:30 PM</span><span class="dp-ev">Ride to Nrupatunga Betta 🛵</span></li>
+      <li><span class="dp-dot d-or"></span><span class="dp-time">7:00 PM</span><span class="dp-ev">Watch the sunset 🌅</span></li>
+      <li><span class="dp-dot d-or"></span><span class="dp-time">7:30 PM</span><span class="dp-ev">Dinner 🍜</span></li>
+    </ul>
+    <div class="dp-tags">
+      <span class="dp-tag">🏙️ City vibes</span>
+      <span class="dp-tag">🎞️ Movie</span>
+      <span class="dp-tag">🌅 Sunset</span>
+    </div>
+  </div>
+
+  <div class="dp-cta">
+    <p>Or maybe none of these feel right...?</p>
+    <button class="dp-btn" onclick="document.getElementById('dpmsg').style.display='block';this.style.display='none'">
+      I have a better idea 😏
+    </button>
+    <div class="dp-msg" id="dpmsg">
+      <p>💕 Please batao... I'm all ears <span class="beat">❤️</span></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Love Letter -->
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -441,4 +571,4 @@
     document.querySelectorAll('.promise-item').forEach(i => observer.observe(i));
   </script>
 </body>
-</html>
+</html> -->
