@@ -1,150 +1,120 @@
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    margin:0;
-    padding:0;
+    font-family:system-ui,sans-serif;
+    background:linear-gradient(135deg,#fff1f6,#fdf4ff,#eef2ff);
 }
 
 .dp{
-    font-family:system-ui,sans-serif;
-    background:linear-gradient(160deg,#fff0f5 0%,#fff7fb 60%,#f0f4ff 100%);
     width:100%;
-    max-width:900px;
+    max-width:700px;
     margin:auto;
-    padding:24px;
+    padding:16px;
 }
 
 .dp-hearts{
     text-align:center;
-    font-size:24px;
-    letter-spacing:6px;
+    font-size:26px;
     margin-bottom:12px;
-    animation:flt 3s ease-in-out infinite alternate;
-}
-
-@keyframes flt{
-    from{transform:translateY(0);}
-    to{transform:translateY(-5px);}
 }
 
 .dp-h1{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(2rem,6vw,3rem);
-    font-weight:700;
     text-align:center;
-    background:linear-gradient(135deg,#e0527a,#a855f7);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
-    line-height:1.3;
+    font-family:'Playfair Display',serif;
+    font-size:2.3rem;
+    font-weight:700;
+    color:#d946ef;
     margin-bottom:8px;
 }
 
 .dp-sub{
     text-align:center;
+    color:#666;
     font-size:1rem;
-    color:#777;
-    margin-bottom:24px;
+    margin-bottom:18px;
 }
 
 .dp-divider{
-    display:flex;
-    align-items:center;
-    gap:10px;
+    text-align:center;
+    font-size:22px;
     margin-bottom:20px;
-}
-
-.dp-divider::before,
-.dp-divider::after{
-    content:'';
-    flex:1;
-    height:1px;
-    background:linear-gradient(90deg,transparent,#f0a0c0,transparent);
-}
-
-.dp-divider span{
-    font-size:20px;
 }
 
 .dp-card{
-    background:rgba(255,255,255,0.9);
+    background:white;
     border-radius:24px;
-    padding:24px;
-    margin-bottom:20px;
-    border:1px solid rgba(230,150,180,0.22);
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
     position:relative;
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
 .dp-card::before{
     content:'';
     position:absolute;
-    top:0;
     left:0;
-    right:0;
-    height:4px;
+    top:0;
+    width:100%;
+    height:5px;
 }
 
 .c-gr::before{
-    background:linear-gradient(90deg,#34d399,#059669);
+    background:#10b981;
 }
 
 .c-pk::before{
-    background:linear-gradient(90deg,#f472b6,#a855f7);
+    background:#ec4899;
 }
 
 .c-or::before{
-    background:linear-gradient(90deg,#fb923c,#e0527a);
+    background:#f97316;
 }
 
 .dp-header{
     display:flex;
     align-items:center;
-    gap:14px;
-    margin-bottom:16px;
+    gap:12px;
+    margin-bottom:18px;
 }
 
 .dp-icon{
-    width:52px;
-    height:52px;
-    border-radius:14px;
+    width:56px;
+    height:56px;
+    border-radius:16px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:24px;
-    flex-shrink:0;
+    font-size:28px;
 }
 
-.i-gr{background:#d1fae5;}
+.i-gr{background:#dcfce7;}
 .i-pk{background:#fce7f3;}
 .i-or{background:#ffedd5;}
 
 .dp-title{
-    font-family:'Playfair Display',serif;
-    font-size:1.3rem;
-    font-weight:600;
-    color:#2d1b2e;
     flex:1;
+    font-family:'Playfair Display',serif;
+    font-size:1.4rem;
+    font-weight:700;
 }
 
 .dp-badge{
-    font-size:0.8rem;
-    font-weight:600;
     padding:6px 12px;
-    border-radius:999px;
+    border-radius:30px;
+    font-size:.85rem;
 }
 
 .b-gr{
-    background:#d1fae5;
-    color:#065f46;
+    background:#dcfce7;
+    color:#166534;
 }
 
 .b-pk{
@@ -162,40 +132,26 @@ body{
 }
 
 .dp-tl li{
-    display:flex;
-    gap:12px;
-    align-items:flex-start;
-    padding:12px 0;
-    border-bottom:1px dashed rgba(200,150,180,0.18);
+    padding:14px 0;
+    border-bottom:1px dashed #eee;
 }
 
 .dp-tl li:last-child{
     border-bottom:none;
 }
 
-.dp-dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    margin-top:8px;
-    flex-shrink:0;
-}
-
-.d-gr{background:#10b981;}
-.d-pk{background:#ec4899;}
-.d-or{background:#f97316;}
-
 .dp-time{
-    min-width:110px;
-    font-size:0.95rem;
+    display:block;
+    font-size:1.05rem;
     font-weight:700;
-    color:#e0527a;
+    color:#ec4899;
+    margin-bottom:4px;
 }
 
 .dp-ev{
-    flex:1;
-    font-size:1rem;
-    color:#4a3050;
+    display:block;
+    font-size:1.05rem;
+    color:#333;
     line-height:1.5;
 }
 
@@ -203,123 +159,96 @@ body{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
-    margin-top:16px;
+    margin-top:14px;
 }
 
 .dp-tag{
-    font-size:0.85rem;
+    background:#fdf2f8;
+    color:#be185d;
     padding:6px 12px;
-    border-radius:999px;
-    background:rgba(200,120,160,0.1);
-    color:#a0406a;
-    border:1px solid rgba(200,120,160,0.18);
+    border-radius:30px;
+    font-size:.85rem;
 }
 
 .dp-cta{
-    background:rgba(255,255,255,0.85);
+    background:white;
     border-radius:24px;
-    padding:30px 20px;
+    padding:24px;
     text-align:center;
-    border:1px solid rgba(230,150,180,0.18);
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
 }
 
 .dp-cta p{
-    font-size:1rem;
-    color:#888;
+    color:#777;
     margin-bottom:16px;
-    font-style:italic;
 }
 
 .dp-btn{
-    display:inline-block;
-    padding:16px 32px;
+    width:100%;
     border:none;
     border-radius:999px;
-    cursor:pointer;
+    padding:16px;
+    background:linear-gradient(135deg,#ec4899,#a855f7);
+    color:white;
     font-size:1rem;
     font-weight:600;
-    background:linear-gradient(135deg,#e0527a,#a855f7);
-    color:white;
-    box-shadow:0 8px 20px rgba(168,85,247,0.25);
-    transition:all .3s ease;
-}
-
-.dp-btn:hover{
-    transform:translateY(-2px);
+    cursor:pointer;
 }
 
 .dp-msg{
     display:none;
-    margin-top:16px;
+    margin-top:15px;
     padding:16px;
-    border-radius:16px;
-    background:linear-gradient(
-        135deg,
-        rgba(224,82,122,.08),
-        rgba(168,85,247,.08)
-    );
+    border-radius:14px;
+    background:#fdf2f8;
 }
 
 .dp-msg p{
+    color:#be185d;
+    font-size:1.05rem;
     font-family:'Playfair Display',serif;
-    font-size:1.1rem;
-    color:#c0366a;
 }
 
 .beat{
+    animation:beat 1s infinite;
     display:inline-block;
-    animation:hb 1s ease infinite;
 }
 
-@keyframes hb{
-    0%,100%{transform:scale(1);}
-    25%{transform:scale(1.3);}
-    75%{transform:scale(1.1);}
+@keyframes beat{
+    50%{
+        transform:scale(1.2);
+    }
 }
 
-/* MOBILE */
-
-@media (max-width:768px){
+@media(max-width:480px){
 
     .dp{
-        padding:16px;
+        padding:12px;
     }
 
-    .dp-card{
-        padding:20px;
+    .dp-h1{
+        font-size:2rem;
     }
 
     .dp-title{
-        font-size:1.15rem;
-    }
-
-    .dp-header{
-        align-items:flex-start;
-    }
-
-    .dp-tl li{
-        flex-direction:column;
-        gap:4px;
-        padding:14px 0;
+        font-size:1.2rem;
     }
 
     .dp-time{
-        min-width:auto;
+        font-size:1rem;
     }
 
     .dp-ev{
-        margin-left:20px;
-    }
-
-    .dp-btn{
-        width:100%;
-    }
-
-    .dp-tag{
-        font-size:0.8rem;
+        font-size:1rem;
     }
 }
 </style>
+
+
+<header>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</header>
+
 
 <h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Saturday date plan with three options</h2>
 
